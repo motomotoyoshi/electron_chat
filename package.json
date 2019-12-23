@@ -2,7 +2,7 @@
   "name": "electron_chat",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": ".tmp/main/index.js",
   "dependencies": {
     "electron": "^7.1.7",
     "photon": "^0.1.2",
@@ -16,7 +16,8 @@
     "babel-preset-react": "^6.24.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "watch": "babel --watch --out-dir .tmp src",
+      "start": "electron ."
   },
   "author": "motomoto",
   "license": "ISC"
