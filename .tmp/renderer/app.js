@@ -24,6 +24,12 @@ var _Room = require("./Room");
 
 var _Room2 = _interopRequireDefault(_Room);
 
+var _firebaseConfig = require("../../firebaseConfig");
+
+var _firebaseBrowser = require("firebase/firebase-browser");
+
+var _firebaseBrowser2 = _interopRequireDefault(_firebaseBrowser);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var appRouting = _react2.default.createElement(
@@ -42,10 +48,10 @@ var appRouting = _react2.default.createElement(
   )
 );
 
-// const appRouting = <div>aaa</div>
-
 if (!location.hash.length) {
   location.hash = "#/login";
 }
+
+_firebaseBrowser2.default.initializeApp(_firebaseConfig.config);
 
 (0, _reactDom.render)(appRouting, document.getElementById("app"));

@@ -6,6 +6,11 @@ import Signup from "./Signup";
 import Rooms from "./Rooms";
 import Room from "./Room";
 
+import {config} from "../../firebaseConfig";
+
+import firebase from "firebase/firebase-browser";
+
+
 const appRouting = (
   <Router history={hashHistory}>
     <Route path="/">
@@ -18,11 +23,11 @@ const appRouting = (
   </Router>
 );
 
-// const appRouting = <div>aaa</div>
-
 if (!location.hash.length) {
   location.hash = "#/login";
 }
+
+firebase.initializeApp(config);
 
 render(
   appRouting,

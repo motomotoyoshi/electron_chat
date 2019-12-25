@@ -4,6 +4,7 @@
   "description": "",
   "main": ".tmp/main/index.js",
   "dependencies": {
+    "firebase": "^3.6.10",
     "photon": "^0.1.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -13,7 +14,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "electron": ">=1.8.8"
+    "electron": "^1.8.8"
   },
   "scripts": {
     "watch": "babel --watch --out-dir .tmp src",
