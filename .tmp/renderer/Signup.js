@@ -10,7 +10,7 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = require("react-dom");
+var _reactRouter = require("react-router");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -41,13 +41,13 @@ var Signup = function (_React$Component) {
           "Signup"
         ),
         _react2.default.createElement(
-          _reactDom.Link,
+          _reactRouter.Link,
           { to: "/rooms" },
           "Create new account"
         ),
         _react2.default.createElement("br", null),
         _react2.default.createElement(
-          _reactDom.Link,
+          _reactRouter.Link,
           { to: "/login" },
           "cancel"
         ),

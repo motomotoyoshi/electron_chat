@@ -10,7 +10,7 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = require("react-dom");
+var _reactRouter = require("react-router");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47,7 +47,7 @@ var Rooms = function (_React$Component) {
             "li",
             null,
             _react2.default.createElement(
-              _reactDom.Link,
+              _reactRouter.Link,
               { to: "/rooms/1" },
               "Room 1"
             )
@@ -56,7 +56,7 @@ var Rooms = function (_React$Component) {
             "li",
             null,
             _react2.default.createElement(
-              _reactDom.Link,
+              _reactRouter.Link,
               { to: "/rooms/2" },
               "Room 2"
             )
