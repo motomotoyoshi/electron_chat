@@ -13,7 +13,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "electron": ">=1.8.2-beta5"
+    "electron": ">=1.8.8"
   },
   "scripts": {
     "watch": "babel --watch --out-dir .tmp src",
