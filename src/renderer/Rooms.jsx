@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, hashHistory } from "react-router";
+import { hashHistory } from "react-router";
 import RoomItem from "./RoomItem";
 import firebase from "firebase/firebase-browser";
 
@@ -34,7 +34,7 @@ export default class Rooms extends React.Component {
 
   handleOnChangeRoomName(e) {
     this.setState({
-      roomName: e.taget.value
+      roomName: e.target.value
     });
   }
 
@@ -46,6 +46,7 @@ export default class Rooms extends React.Component {
     }
 
     const newRoomRef = this.db.ref("/chatrooms").push();
+    // newRoomRef.push();
     const newRoom = {
       description: roomName
     };
@@ -63,7 +64,7 @@ export default class Rooms extends React.Component {
     return this.db.ref("/chatrooms").limitToLast(20).once("value").then(snapshot => {
       const rooms = [];
       snapshot.forEach(item => {
-        rooms.push(Object.assign({ key: item.key }, item,val()));
+        rooms.push(Object.assign({ key: item.key }, item.val()));
       });
       this.setState({ rooms });
     });

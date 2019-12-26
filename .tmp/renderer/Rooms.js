@@ -68,7 +68,7 @@ var Rooms = function (_React$Component) {
     key: "handleOnChangeRoomName",
     value: function handleOnChangeRoomName(e) {
       this.setState({
-        roomName: e.taget.value
+        roomName: e.target.value
       });
     }
   }, {
@@ -84,6 +84,7 @@ var Rooms = function (_React$Component) {
       }
 
       var newRoomRef = this.db.ref("/chatrooms").push();
+      // newRoomRef.push();
       var newRoom = {
         description: roomName
       };
@@ -103,7 +104,7 @@ var Rooms = function (_React$Component) {
       return this.db.ref("/chatrooms").limitToLast(20).once("value").then(function (snapshot) {
         var rooms = [];
         snapshot.forEach(function (item) {
-          rooms.push(Object.assign({ key: item.key }, item, val()));
+          rooms.push(Object.assign({ key: item.key }, item.val()));
         });
         _this3.setState({ rooms: rooms });
       });
